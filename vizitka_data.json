@@ -23,6 +23,14 @@
     "email": "asylbek@apec.edu.kz",
     "photo": "images/default.jpg"
   },
+  "yerzhan": {
+    "firstName": "Yerzhan",
+    "lastName": "Ramazanov",
+    "jobTitle": "Director of External Cooperation",
+    "phone": "+77001281981",
+    "email": "e.ramazanov@apec.edu.kz",
+    "photo": "yerzhan.png"
+  },
   "rizabek": {
     "firstName": "Ризабек",
     "lastName": "Болатов",
@@ -33,3 +41,4 @@
   }
 
 }
+
