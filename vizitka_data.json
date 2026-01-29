@@ -5,7 +5,7 @@
     "jobTitle": "Специалист по ПО",
     "phone": "+77051134743",
     "email": "e.zholdaskaliev@apec.edu.kz",
-    "photo": "images/eldar.png"
+    "photo": "eldar.png"
   },
   "ernaz": {
     "firstName": "Ерназ",
@@ -13,23 +13,23 @@
     "jobTitle": "Системный администратор",
     "phone": "+77784291061",
     "email": "ernaz@apec.edu.kz",
-    "photo": "images/ernaz.jpg"
-  },
-  "nurmyshev": {
-    "firstName": "Асылбек",
-    "lastName": "Нурмышев",
-    "jobTitle": "Заведующий отделением",
-    "phone": "+77053649592",
-    "email": "asylbek@apec.edu.kz",
-    "photo": "images/default.jpg"
+    "photo": "ernaz.jpg"
   },
   "yerzhan": {
     "firstName": "Yerzhan",
     "lastName": "Ramazanov",
     "jobTitle": "Director of External Cooperation",
-    "phone": "+77782462053",
+    "phone": "+77001281981",
     "email": "e.ramazanov@apec.edu.kz",
     "photo": "yerzhan.png"
+  },
+   "asylbek": {
+    "firstName": "Асылбек",
+    "lastName": "Нурмышев",
+    "jobTitle": "Директор",
+    "phone": "+77053649592",
+    "email": "a.nurmyshev@apec.edu.kz",
+    "photo": "asylbek.png"
   },
   "rizabek": {
     "firstName": "Ризабек",
@@ -39,7 +39,4 @@
     "email": "r_bolatov@apec.edu.kz",
     "photo": "rizabek.png"
   }
-
 }
-
-
