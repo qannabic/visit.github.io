@@ -59,19 +59,30 @@ async function loadProfile(id) {
     const waLink = `https://wa.me/${cleanPhone}`;
     document.getElementById("btnWhatsapp").href = waLink;
 
-    // Кнопка Email (Gmail)
-    const btnEmail = document.getElementById("btnEmail");
-    if (person.email) {
-        const emailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${person.email}`;
-        if (btnEmail) {
-            btnEmail.href = emailLink;
+// --- Новый код ---
+// Кнопка Email
+const btnEmail = document.getElementById("btnEmail");
+
+if (person.email) {
+    if (btnEmail) {
+        // Проверяем, мобильное ли устройство
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+            // ДЛЯ ТЕЛЕФОНОВ: Используем стандартный mailto
+            // Это откроет родное приложение почты (Gmail или Apple Mail)
+            btnEmail.href = `mailto:${person.email}`;
+            btnEmail.removeAttribute("target"); // Убираем _blank, чтобы не открывало пустую вкладку
+        } else {
+            // ДЛЯ КОМПЬЮТЕРОВ: Открываем веб-интерфейс Gmail в новой вкладке
+            btnEmail.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${person.email}`;
             btnEmail.target = "_blank";
         }
-    } else {
-        // Если почты нет, скрываем или деактивируем кнопку (по желанию)
-        if (btnEmail) btnEmail.style.opacity = "0.5";
     }
-
+} else {
+    // Если почты нет, скрываем кнопку
+    if (btnEmail) btnEmail.style.display = "none";
+}
   } catch (error) {
     console.error(error);
     // Кнопка сохранения всё равно работает, так как настроена в шаге 1
@@ -82,4 +93,5 @@ async function loadProfile(id) {
 document.addEventListener('DOMContentLoaded', () => {
     const currentId = getQueryParam("id");
     loadProfile(currentId); 
+
 });
